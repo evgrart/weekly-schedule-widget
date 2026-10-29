@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "weekly-schedule-widget"
+version = "0.1.0"
+description = "Windows weekly calendar widget with local SHAD deadline synchronization"
+requires-python = ">=3.11"
+license = "MIT"
+dependencies = [
+  "icalendar==7.3.0",
+  "recurring-ical-events==3.8.2",
+  "tzdata==2026.5",
+  "playwright==1.64.1"
+]
+
+[tool.setuptools]
+py-modules = [
+  "app_paths", "config_store", "calendar_core", "desktop_anchor",
+  "deadline_core", "deadline_panel", "shad_sync", "shad_background", "widget"
+]
